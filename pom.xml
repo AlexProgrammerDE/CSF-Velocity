@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ghostchu.csf</groupId>
-    <artifactId>CSF-Bungee</artifactId>
-    <version>1.1</version>
+    <groupId>net.pistonmaster.csf</groupId>
+    <artifactId>CSF-Velocity</artifactId>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>CSF-Bungee</name>
+    <name>CSF-Velocity</name>
 
     <properties>
         <java.version>1.8</java.version>
@@ -43,7 +43,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>org.apache.commons.</pattern>
-                                    <shadedPattern>com.ghostchu.csfbungee.shade.org.apache.commons.</shadedPattern>
+                                    <shadedPattern>com.ghostchu.csfvelocity.shade.org.apache.commons.</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
@@ -59,26 +59,32 @@
         </resources>
     </build>
 
+
     <repositories>
         <repository>
-            <id>sonatype</id>
-            <url>https://oss.sonatype.org/content/groups/public/</url>
+            <id>papermc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
     </repositories>
 
     <dependencies>
         <dependency>
-            <groupId>net.md-5</groupId>
-            <artifactId>bungeecord-api</artifactId>
-            <version>1.16-R0.4</version>
+            <groupId>com.velocitypowered</groupId>
+            <artifactId>velocity-api</artifactId>
+            <version>3.1.1</version>
             <scope>provided</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.19.0</version>
+            <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 </project>

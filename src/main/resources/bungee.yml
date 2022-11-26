@@ -1,3 +1,0 @@
-name: CSF-Bungee
-version: '${project.version}'
-main: com.ghostchu.csfbungee.CSFBungee
